@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HTML CSS ww3school</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	
+</head>
+<body>
+	<p><a href="css.html">CSS</a></p>
+<!-- HTML FORM -->
+
+<h2>HTML Forms</h2>
+
+<!-- HTML FORM start-->
+
+  <h3>HTML Forms</h3>
+
+  <div>form thu thap thong tin nguoi dung</div>
+  
+    <h4><a id="htmlform1a" href="#htmlform1b">&lt;input&gt;</a></h4>
+
+    <h4 id="elements1b"><a href="#elements1a">&lt;lable&gt;</a></h4>
+    	<p>lable la nhan</p>
+	<pre>
+	&lt;form>
+	  &lt;label for="fname">First name:&lt;/label>&lt;br>
+	  &lt;input type="text" id="fname" name="fname">&lt;br>
+	  &lt;label for="lname">Last name:&lt;/label>&lt;br>
+	  &lt;input type="text" id="lname" name="lname">
+	&lt;/form>
+	</pre>
+		<div>for-lable == id-input de len ket nhau </div>
+	<h4>Note: name trong input</h4>
+	  <div>phai co name, value moi duoc luu vao khi nhan submit. name = "fname" === database</div>
+
+<!-- HTML FORM end-->
+<!-- HTML Form Elements start -->
+
+	<h3>HTML Form Elements</h3>
+	<ul>
+		<li><a href="#htmlform1b">&lt;input></a></li>
+		<li><a id="elements1a" href="#elements1b">&lt;label></a></li>
+		<li><a id="elements2a" href="#elements2b">&lt;select></a></li>
+		<li><a id="elements3a" href="#elements3b">&lt;textarea></a></li>
+		<li>&lt;button></li>
+		<li><a id="element4a" href="#element4b">&lt;fieldset> and &lt;legend></a></li>
+		<li><a id="element5a" href="#element5b">&lt;datalist></a></li>
+		<li><a id="element6a" href="#element6b">&lt;output></a></li>
+	</ul>
+
+	  <h4><a id="elements2b" href="#elements2a">&lt;select></a></h4>
+<pre>
+&lt;label for="cars">Choose a car:&lt;/label>
+&lt;select id="cars" name="cars">
+  &lt;option value="volvo">Volvo&lt;/option>
+  &lt;option value="saab">Saab&lt;/option>
+  &lt;option value="fiat" selected>Fiat&lt;/option>
+  &lt;option value="audi">Audi&lt;/option>
+&lt;/select>
+</pre>
+<p>Note: selected trong option</p>
+<p>Note: dung multiple de co the chon nhieu</p>
+
+	  	<form action="/">
+	  		<label for="cars">Choose a car:</label>
+	  		<select id="cars" name="nameCars" size="3"multiple>
+	  			<option value="volvo">Volvo</option>
+	  			<option value="saab" selected>Saab</option>
+	  			<option value="fiat" selected>Fiat</option>
+	  			<option value="audi">Audi</option>
+	  		</select>
+	  		<input type="submit" value="Chon" name="">
+	  	</form>
+
+	  <h4><a id="elements3b" href="#elements3a">&lt;textarea></a></h4>
+	  	<pre>&lt;textarea name="message" rows="10" cols="30"></pre>
+	  	<p>rows: so dong, cols: chieu rong</p>
+	  	<p>hoac style="width:200px; height:600px;"</p>
+
+	  	<form action="/action_page.php">
+  		<textarea name="message" rows="10" cols="30">The cat was playing in the garden.</textarea>
+
+  	  <h4><a id="element4b" href="#element4a">&lt;fieldset> and &lt;legend></a></h4>
+  	  <p>&lt;fieldset>: nhom ca phan tu lien quan. &lt;legend> chu thich</p>
+<pre>
+&lt;form action="/action_page.php">
+  &lt;fieldset>
+    &lt;legend>Personalia:&lt;/legend>
+    &lt;label for="fname">First name:&lt;/label>&lt;br>
+    &lt;input type="text" id="fname" name="fname" value="John">&lt;br>
+    &lt;label for="lname">Last name:&lt;/label>&lt;br>
+    &lt;input type="text" id="lname" name="lname" value="Doe">&lt;br>&lt;br>
+    &lt;input type="submit" value="Submit">
+  &lt;/fieldset>
+&lt;/form>
+</pre>
+		<form action="/action_page.php">
+		  <fieldset>
+		    <legend>Personalia:</legend>
+		    <label for="fname">First name:</label><br>
+		    <input type="text" id="fname" name="fname" value="John"><br>
+		    <label for="lname">Last name:</label><br>
+		    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+		    <input type="submit" value="Submit">
+		  </fieldset>
+		</form>
+
+	  <h4><a id="element5b" href="#element5a">&lt;datalist></a> trong &lt;input></h4>
+<pre>
+&lt;form action="/action_page.php">
+  &lt;input list="browsers" name="browser">
+  &lt;datalist id="browsers">
+    &lt;option value="Internet Explorer">
+    &lt;option value="Firefox">
+    &lt;option value="Chrome">
+    &lt;option value="Opera">
+    &lt;option value="Safari">
+  &lt;/datalist>
+  &lt;input type="submit">
+&lt;/form>
+</pre>
+		<form action="/action_page.php">
+		  <input list="browsers" name="browser">
+		  <datalist id="browsers">
+		    <option value="Internet Explorer">
+		    <option value="Firefox">
+		    <option value="Chrome">
+		    <option value="Opera">
+		    <option value="Safari">
+		  </datalist>
+		  <input type="submit">
+		</form>
+		<b>Note</b>: co the them 1 gia tri khac
+
+	  <h4><a id="element6b" href="#element6a">&lt;output></a></h4>
+<pre>
+&lt;form action="/action_page.php"
+  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  &lt;input type="range"  id="a" name="a" value="50">
+  100 +
+  &lt;input type="number" id="b" name="b" value="50">
+  =
+  &lt;output name="x" for="a b">&lt;/output>
+  &lt;br>&lt;br>
+  &lt;input type="submit">
+&lt;/form>
+</pre>
+	  <form action="/" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+	  	0
+	  	<input type="range" id="a" name="a" value="50" max="200">
+	  	200+
+	  	<input type="number" id="b" name="b" value="50">
+	  	=
+	  	<output name="x" for="a b"></output>
+	  </form>
+
+
+
+<!-- HTML Form Elements end???? -->
+<!-- HTML Input Types start-->
+
+  <h3 id="htmlform1b"><a href="#htmlform1a">HTML Input Types</a></h3>
+
+<div>&lt;input type=" "&gt;</div>
+
+<ul>
+	<li>button</li>
+	<li><a id="inputType1b" href="#inputType1a">text</a></li>
+	<li><a href="#inputType2b" id="inputType2a">password	</a></li>
+	<li><a id="inputType3b" href="#inputType3a">Submit</a></li>
+	<li><a id="inputType4a" href="#inputType4a">reset</a></li>
+	<li>Radio</li>
+	<li>checkbox</li>
+	<li><a id="inputType5b" href="#inputType5a">Button</a></li>
+	<li><a id="inputType6b" href="#inputType6a">color</a></li>
+	<li><a id="inputType7b" href="#inputType7a">Date</a></li>
+	<li>email</li>
+	<li>month</li>
+	<li><a id="inputType8b" href="#inputType8a">number</a></li>
+	<li><a id="inputType9b" href="#inputType9a">range</a></li>
+	<li><a id="inputType10b" href="#inputType10a">search</a></li>
+	<li><a id="inputType11b" href="#inputType11a">tel</a></li>
+	<li>time</li>
+	<li>url</li>
+	<li>week</li>
+	<li>???file</li>
+</ul>
+
+<h4><a href="#inputType1b" id="inputType1a">text</a></h4>
+
+<form action="">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h4 id="inputType2a"><a href="#inputType2b">password</a></h4>
+
+<form>
+	<label>Username:</label><br>
+	<input type="text" name=""><br>
+	<label>Password:</label><br>
+	<input type="password" name=""><br>
+	<input type="submit" name="">
+</form>
+	
+	<h4 id="inputType3a"><a href="#inputType3b">Submit</a></h4>
+
+	  <pre>
+&lt;form action="/action_page.php">
+  &lt;label for="fname">First name:&lt;/label>&lt;br>
+  &lt;input type="text" id="fname" name="fname" value="John">&lt;br>
+  &lt;label for="lname">Last name:&lt;/label>&lt;br>
+  &lt;input type="text" id="lname" name="lname" value="Doe">&lt;br>&lt;br>
+  &lt;input type="submit" value="Submit">
+&lt;/form>
+	  </pre>
+	  <p><b>Note</b>: action xac dinh noi luu tru du lieu. <b>Value</b> la gia tri mac dinh. Neu bo qua value="Submit", khi nha'n chi nhan gia tri mac dinh</p>
+
+	<h4 id="inputType4a"><a href="#inputType4b">reset</a></h4>
+	<p>gia tri mac dinh. value ="John", value="Doe"</p>
+	  <form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  <input type="reset">
+</form>
+	
+	<h4 id="inputType5a"><a href="#inputType5b">Button</a></h4>
+	<pre>&lt;input type="button" value="click me"></pre>
+	<p>Tuong duong</p>
+	<pre>&lt;button onclick="">click me&lt;/button></pre>
+
+	<h4 id="inputType6a"><a href="#inputType6b">Color</a></h4>
+	<pre>
+&lt;form action="/action_page.php">
+  &lt;label for="favcolor">Select your favorite color:&lt;/label>
+  &lt;input type="color" id="favcolor" name="favcolor" value="#ff0000">
+  &lt;input type="submit" value="Submit">
+&lt;/form>
+	</pre>
+	<form action="/">
+		<label for="idfavcolor">Select your color:</label><br>
+		<input type="color" id="idfavcolor" name="namefavcolor" value="#ff0000">
+		<input type="submit" value="Submit" name="">
+	</form>
+
+	<h4><a id="inputType7a" href="#inputType7b">Date</a></h4>
+
+	<form action="/">
+		<label for="idbirthday">Birthday</label>
+		<input type="date" id="idbirthday" name="namebirthday">
+		<input type="submit" value="Submit">
+	</form>
+	<p>Su dung min = "1980-01-01" va max = "2020-12-31"</p>
+	<form action="/">
+		<label for="datemin">Tu</label>
+		<input type="date" id="datemin" name="datemin" min="1980-01-01" ><br>
+		<label for="datemax">Den</label>
+		<input type="date" id="datemax" name="datemax">
+	</form>
+	<p><b>&lt;input type="datetime-local"></b></p>
+	<form action="/">
+		<label for="localdate">Nhap ngay gio:</label>
+		<input type="datetime-local" id="localdate" name="namelocaldate">
+	</form>
+
+	<h4>month</h4>
+	<form action="/action_page.php">
+	  <label for="bdaymonth">Chon thang/nam:</label>
+ 	  <input type="month" id="bdaymonth" name="bdaymonth" size="1px">
+ 	  <input type="submit" value="Submit">
+	</form>
+
+	<h4><a id="inputType8a" href="#inputType8b">number</a></h4>
+<form>
+  <label for="quantity">Nhap(1 - 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5" value="0">
+</form>
+	<p><b>Note danh sach thuoc tinh gioi han</b></p>
+	<pre>-checked: tick truoc mac dinh, dung type=checkbox/radio
+-disabled: dau vao bi vo hieu qua
+-max,min
+-step: buoc trong number
+-maxlength: chieu dai ky tu toi da
+-pattern: khuon mau cac ky tu duoc cho phep trong input types: text, date, search, url, tel, email, and password.
+-required: bat buoc
+-readonly: chi doc, khong the thay doi
+-???size: chieu dai cua truong
+-value: gia tri mac dinh
+	</pre>
+
+	<h4><a id="inputType9a" href="#inputType9b">range</a></h4>
+
+<form>
+  <label for="vol">Volume (between 0 and 100):</label>
+  <input type="range" id="vol" name="vol" min="0" max="100" step="5">
+  <input type="submit" value="Cap nhat" name="">
+</form>
+
+	<h4><a id="inputType10a" href="#inputType10b">search</a></h4>
+
+	<form action="/">
+		<label for="search">Search Google:</label>
+		<input type="search" id="search" name="namesearch">
+		<input type="submit" value="Tim">
+	</form>
+
+	<h4><a id="inputType11a" href="#inputType11b">tel</a></h4>
+	<form>
+  <label for="phone">Enter your phone number:</label>
+  <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+  <input type="submit" value="cap nhat" name="">
+</form>
+	<p><b>Note: pattern trong input</b></p>
+	<p>pattern="[A-Za-z]{3}" nhap vao 3 chu cai, HOA-thuong va khong co so, ky tu dac biet</p>
+	<p>pattern=".{6,}" it nhat 6 ky tu</p>
+	<p>pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" it nhat 1 ky tu so, it nhat 1 chu HOA/thuong, it nhat 8 ky tu</p>
+	<p>=> title="nhap lai ky tu"</p>
+
+	<input type="file" name="" value="">
+
+<!-- HTML Input Types end-->
+
+
+
+</body>
+</html>

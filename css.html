@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS ww3school</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!-- CSS Advanced start -->
+<h2>CSS Advanced</h2>
+<!-- CSS Gradients start -->
+<h3>CSS Gradients</h3>
+
+<ul>
+	<li>Linear Gradients: tuyen tinh</li>
+	<li>Radial Gradients trung tam</li>
+</ul>
+
+<h4>Linear Gradients</h4>
+<pre>background-image: linear-gradient(direction, color-stop1, color-stop2, ...);</pre>
+
+<p>-Top to Bottom {linear-gradient(red, yellow)}</p>
+<div style="background: linear-gradient(red, yellow); height: 50px; width: 100px;"></div>
+
+<p>-to right </p>
+<div style="background: linear-gradient(to right, red, yellow); height: 50px; width: 100px;"></div>
+
+<p>-to left</p>
+<div style="background: linear-gradient(to left, red, yellow); height: 50px; width: 100px;"></div>
+
+<p>-to bottom left/to left bottom</p>
+<div style="background: linear-gradient(to bottom left, red, yellow); height: 50px; width: 100px;"></div>
+
+<p>-(angle): 0deg-bottom, 90deg-left, 180deg-top {linear-gradient(0deg, red, yellow)}</p>
+<div style="background: linear-gradient(0deg, red, yellow); height: 50px; width: 100px;"></div>
+
+<p>-Transparency (mo dan): gia tri cuoi tu 0->1 {linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1))}</p>
+<div style="background: linear-gradient(to right, rgba(255,0,0,0),rgba(255,0,0,1)); height: 50px; width: 100px;"></div>
+
+<p>-repeating-linear-gradient(red 25%, yellow 50%)</p>
+<div style="background: repeating-linear-gradient(red 25%, yellow 50%); height: 50px; width: 100px;"></div>
+
+<h4>Radial Gradients</h4>
+
+<pre>background-image: radial-gradient(shape size at position, start-color, ..., last-color);</pre>
+
+<p>-radial-gradient(red 5%, yellow 15%, green 60%);</p>
+<div style="background: radial-gradient(red 10%, yellow 30%, green 60%); height: 50px; width: 200px;"></div>
+
+<p>- hinh tron; circle</p>
+<div style="background: radial-gradient(circle, red, yellow, green); height: 100px; width: 200px;"></div>
+
+<p>-repeating-radial-gradient(red 5%, yellow 15%, green 60%)</p>
+<div style="background: repeating-radial-gradient(circle, red 5%, yellow 15%, green 60%); height: 100px; width: 200px;"></div>
+
+<!-- CSS Gradients end -->
+
+
+
+
+<!-- CSS Transitions start -->
+<h3>CSS Transitions</h3>
+<ul>
+	<li>transition</li>
+	<li>transition-property</li>
+	<li>transition-duration</li>
+	<li>transition-timing-function</li>
+	<li>transition-delay</li>
+</ul>
+
+<p>div:hover chuot di chuyen len phan tu</p>
+<div id="transition1"></div>
+<br>
+<div id="transition2"></div>
+
+<pre>
+transition-delay 0s, 0s, 0s
+transition-duration 2s, 2s, 4s
+transition-property background, width, height
+transition-timing-function ease, ease, ease</pre>
+
+<b>transition-timing-function</b>
+
+<ul><li>ease:  a slow start, then fast, then end slowly (default)</li></ul>
+<div class="classtransition1" id="transition3"></div>
+
+<ul><li>linear: toc do deu</li></ul>
+<div class="classtransition1" id="transition4"></div>
+
+<ul><li>ease-in: nhanh dan</li></ul>
+<div class="classtransition1" id="transition5"></div>
+
+<ul><li>ease-out cham dan</li></ul>
+<div class="classtransition1" id="transition6"></div>
+
+<ul><li>ease-in-out start va end cham</li></ul>
+<div class="classtransition1" id="transition7"></div>
+
+<br>
+<b>transition-delay</b>
+<br>
+<br>
+<div class="classtransition1" id="transition8"></div>
+
+<br>
+<b>transform: rotate(180deg)</b>
+<br>
+<br>
+<div id="transition9"></div>
+<br>
+
+<b>Note (tom tat)</b>
+<pre>
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+</pre>
+<p>Tuong tu:</p>
+<pre>
+  transition: width 2s linear 1s;
+</pre>
+<!-- CSS Transitions end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
