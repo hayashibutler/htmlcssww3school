@@ -6,6 +6,146 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+<!-- CSS Tutorial start-->
+<h2>CSS Tutorial</h2>
+<!-- CSS Layout - Overflow start-->
+  <h3>CSS Layout - Overflow</h3>
+    <p>cat noi dung va them thanh cuon</p>
+    <ul><li>overflow: <b>visible</b> (default) Phan tran khong cat bo't, noi dung hien thi ben ngoai</li></ul>
+    <div id="overflow1">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+    <br>
+    <br>
+    <br>
+
+   	<ul><li>overflow: <b>hidden</b> an van ban neu</ul></li>
+   	<div id="overflow2">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+   	<ul><li>overflow: <b>scroll</b> them thanh cuon ca doc va ngang</li></ul>
+   	<div id="overflow3">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+   	<ul><li>@@ overflow: <b>auto</b> hien thi thanh cuon can thiet</li></ul>
+   	<div id="overflow4">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+<!-- CSS Layout - Overflow end -->
+<!-- CSS Layout - float and clear  start-->
+  <h3>CSS Layout - float and clear</h3>
+  	<h4>float</h4>
+  	<p>Chi dinh vi tri hinh anh/van ban</p>
+  	<ul><li>left</li></ul>
+  	<ul><li>right</li></ul>
+  	<ul><li>none (default) hien thi noi xuat hien trong van ban</li></ul>
+  	<ul><li>inherit</li> ke thua thuoc tinh cua cha</ul>
+
+  	<p class="border"><img id="float1" src="images/pineapple.jpg" alt="Pineapple" style="width:150px;height:150px;">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+  	<p class="border"><img id="float2" src="images/pineapple.jpg" alt="Pineapple" style="width:150px;height:150px;">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+  	<p class="border"><img id="float3" src="images/pineapple.jpg" alt="Pineapple" style="width:150px;height:150px;">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+  	<h4>clear</h4>
+  	<ul>
+  		<li>none</li>
+  		<li>left</li>
+  		<li>right</li>
+  		<li>both</li>
+  		<li>inherit</li>
+  	</ul>
+  	<div class="border">
+  	  <img id="float1" src="images/pineapple.jpg" alt="Pineapple" style="width:150px;height:150px;">
+	  <p id="float4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+	</div>
+
+	<h4>clearfix: them float cho 2 noi dung gom van ban va hinh anh</h4>
+	<p>hoac dung code sau</p>
+	<pre>clearfix::after {
+  content: "";
+  clear: both;
+  display: table;}</pre>
+  	<div class="border" id="clearfix">
+	  <p><img id="float1" src="images/pineapple.jpg" alt="Pineapple" style="width:150px;height:150px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+	</div>
+
+  <h3>Float Examples</h3>
+	<div class="clearfix">
+	  <div class="float5" style="background-color:#bbb">
+	  <p>Some text inside the box.</p>
+	  </div>
+	  <div class="float5" style="background-color:#ccc">
+	  <p>Some text inside the box.</p>
+	  </div>
+	  <div class="float5" style="background-color:#ddd">
+	  <p>Some text inside the box.</p>
+	  </div>
+	</div>
+
+	<h4><a href="#idFloatExamples1b" id="idFloatExamples1a">box-sizing</a></h4>
+	<pre>* {
+  box-sizing: border-box;
+}</pre>
+	<div class="clearfix">
+		<img class="float6" src="images/img_5terre.jpg">
+		<img class="float6" src="images/img_forest.jpg">
+		<img class="float6" src="images/img_mountains.jpg">
+	</div>
+
+	<h4><a id="flexbox1a" href="#flexbox1b">Flexbox</a></h4>
+	<ul><li>Chua co flexbox</li></ul>
+	<p>Viec chi dung height: 150px, chu se thua` ra neu zoom+</p>
+	<div>
+		<div class="float7" style="background-color:#bbb">
+			<h2>Box 1</h2>
+			<p>Some content, some content, some content</p>
+		</div>
+		<div class="float7" style="background-color:#ccc">
+			<h2>Box 2</h2>
+			<p>Some content, some content, some content</p>
+			<p>Some content, some content, some content</p>
+			<p>Some content, some content, some content</p>		
+		</div>
+	</div>
+	
+	<ul><li>co flexbox</li></ul>
+	<p>Thay height thanh flexbox</p>
+	<pre>display: fex tai float9 ngoai 2 float8 (cua 2 doan)</pre>
+	<div class="float9"> 
+		<div class="float8" style="background-color:#bbb">
+			<h2>Box 1</h2>
+			<p>Some content, some content, some content</p>
+		</div>
+		<div class="float8" style="background-color:#ccc">
+			<h2>Box 2</h2>
+			<p>Some content, some content, some content</p>
+			<p>Some content, some content, some content</p>
+			<p>Some content, some content, some content</p>		
+		</div>
+	</div>
+
+
+
+
+
+<!-- CSS Layout - float and clear  end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- CSS Advanced start -->
 <h2>CSS Advanced</h2>
 <!-- CSS Gradients start -->
@@ -54,6 +194,29 @@
 <div style="background: repeating-radial-gradient(circle, red 5%, yellow 15%, green 60%); height: 100px; width: 200px;"></div>
 
 <!-- CSS Gradients end -->
+<!-- CSS Box sizing start -->
+
+  <h3><a href="#idFloatExamples1a" id="idFloatExamples1b">CSS Box sizing</a></h3>
+  <pre>box-sizing: border-box</pre>
+  <p>Kich thuoc tha bao gom cac thuoc tinh van ban: padding, margin</p>
+  <ul><li>Chua co box-sizing</li></ul>
+  	<div class="boxsizing1">This div is smaller (width is 300px and height is 100px).</div>
+	<pre>Them padding: 20px</pre>
+	<div class="boxsizing2">This div is bigger (width is also 300px and height is 100px).</div>
+  <ul><li>Co box-sizing: border-box</li></ul>
+	<div class="boxsizing3">This div is bigger (width is also 300px and height is 100px).</div>
+	<p><b>Note</b>: toan bo trang * {}</p>
+	<pre>* {
+  box-sizing: border-box;
+}</pre>
+
+<!-- CSS Box sizing end -->
+
+
+
+
+
+
 
 
 
@@ -123,6 +286,9 @@ transition-timing-function ease, ease, ease</pre>
 <!-- CSS Transitions end -->
 
 
+
+<!-- CSS Flexbox start -->
+<h2><a id="flexbox1b" href="#flexbox1a">CSS Flexbox</a></h2>
 
 
 
