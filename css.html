@@ -6,11 +6,52 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
 <!-- CSS Tutorial start-->
-<h2>CSS Tutorial</h2>
+<h1 class="body">CSS Tutorial</h1>
+<!-- CSS Display start -->
+<h2 class="body">CSS Display</h2>
+  <p>Cho phep hien thi, theo block/inline</p>
+  <ul><li><b>Block-level</b></li></ul>
+	<pre>
+	&lt;div>
+	&lt;h1> - &lt;h6>
+	&lt;p>
+	&lt;form>
+	&lt;header>
+	&lt;footer>
+	&lt;section>
+	</pre>
+  <ul><li><b>inline-level</b></li></ul>
+	<pre>
+	&lt;span>
+	&lt;a>
+	&lt;img>
+	</pre>
+  <h4>Chuyen doi giua inline va block</h4>
+  <pre> style="display: inline"</pre>
+  <ul>
+	  <li style="display: inline">HTML</li>
+	  <li style="display: inline">CSS</li>
+	  <li style="display: inline">JavaScriptf</li>
+  </ul>
+  <pre> style="display: block"</pre>
+  <ul>
+	  <li style="display: block;">HTML</li>
+	  <li style="display: block">CSS</li>
+	  <li style="display: block">JavaScriptf</li>
+  </ul>
+  <p>khac nhau <b>display:none</b> va <b>visibility:hidden</b></p>
+  <ul>
+  	<li>display:none khong hien thi, vi tri thay doi</li>
+  	<li>visibility:hidden an di, nhung vi tri giao dien khong thay doi</li>
+  </ul>
+<!-- CSS Display end -->
+<h2 class="body">CSS max-width</h2>
+<h2 class="body">CSS Position</h2>
+
+
 <!-- CSS Layout - Overflow start-->
-  <h3>CSS Layout - Overflow</h3>
+  <h2 class="body">CSS Layout - Overflow</h2>
     <p>cat noi dung va them thanh cuon</p>
     <ul><li>overflow: <b>visible</b> (default) Phan tran khong cat bo't, noi dung hien thi ben ngoai</li></ul>
     <div id="overflow1">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
@@ -29,7 +70,7 @@
 
 <!-- CSS Layout - Overflow end -->
 <!-- CSS Layout - float and clear  start-->
-  <h3>CSS Layout - float and clear</h3>
+  <h2 class="body">CSS Layout - float and clear</h2>
   	<h4>float</h4>
   	<p>Chi dinh vi tri hinh anh/van ban</p>
   	<ul><li>left</li></ul>
@@ -168,7 +209,7 @@
 
 <!-- CSS Layout - float and clear  end-->
 <!-- CSS Layout - display: inline-block start -->
-  <h3>CSS Layout - display: inline-block start</h3>
+  <h2>CSS Layout - display: inline-block start</h2 >
 
 
 
@@ -177,10 +218,40 @@
 
 
 <!-- CSS Layout - display: inline-block end -->
+  <h2 class="body">CSS Align</h2>
+  <h2 class="body">CSS Combinators</h2>
 
 
+<!-- CSS Pseudo-class start -->
+  <h2 class="body">CSS Pseudo-class</h2>	
+  <p>Tao 1 hieu chinh phu bo sung</p>
+	<pre>selector:pseudo-class {
+  property: value;
+}</pre>
+<p><b><a class="pseudoclass1" href="#" target="_blank">This is a link</a></b></p>
+<p><b>Note</b>: theo thu tu :link > :visited > :hover > :active</p>
+   <h4>Hien ghi chu</h4>
+   <pre>
+  div:hover span{ //goi class con 'span' trong class cha div
+    display:block;
+    color: red
+  }
+   </pre>
+   <div class="divseudoclass2"><p>Hover over me to show the p elementTada! Here I am!<span class="pseudoclass2"> Hien ghi chu</span></p>
+</div>
+	<h4>:first-child</h4>
+	<p>lay phan tu dau tien</p>
+<pre>
+p:first-child {
+  color: blue;
+} 
+</pre>
+<p class="pseudoclass3">This is some text.</p>
+<p class="">This is some text.</p>
+<p>??? khong lam duoc tai day. tren ww3school lam dc</p>
 
-
+<!-- CSS Pseudo-class end -->
+<!-- CSS Pseudo-element start -->
 
 
 
@@ -197,9 +268,9 @@
 
 
 <!-- CSS Advanced start -->
-<h2>CSS Advanced</h2>
+<h1 class="body">CSS Advanced</h1>
 <!-- CSS Gradients start -->
-<h3>CSS Gradients</h3>
+<h2 class="body">CSS Gradients</h2>
 
 <ul>
 	<li>Linear Gradients: tuyen tinh</li>

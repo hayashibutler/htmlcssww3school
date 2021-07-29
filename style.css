@@ -1,3 +1,7 @@
+mau trinh bai chung*/
+.body {
+  text-align: center;
+}
 body {
 	margin-left:8% ;
 	margin-right:8% ;
@@ -180,6 +184,36 @@ body {
 
 /*CSS Layout - float and clear  end*/
 
+/*CSS Pseudo-class start*/
+.pseudoclass1:link{
+	color: red;
+}
+.pseudoclass1:visited{
+	color: green;
+}
+.pseudoclass1:hover{
+	color: hotpink;
+}
+.pseudoclass1:active{
+	color: blue;
+}
+
+.pseudoclass2 {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+.divseudoclass2:hover .pseudoclass2{
+  display:block;
+  color: red
+}
+
+.pseudoclass3 {
+  color: blue;
+} 
+/*<!-- CSS Pseudo-class end -->*/
+/*<!-- CSS Pseudo-element start -->*/
 
 
 
@@ -259,4 +293,4 @@ background: green;
 	border: 1px solid green;
 	box-sizing: border-box;
 }
-/*CSS Box sizing end*/
+/*CSS Box sizing end
