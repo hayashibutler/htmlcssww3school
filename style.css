@@ -1,4 +1,4 @@
-mau trinh bai chung*/
+/*mau trinh bai chung*/
 .body {
   text-align: center;
 }
@@ -14,6 +14,82 @@ body {
 	padding: 2% 2% 2% 2%;
 }
 /*CSS Tutorial start*/
+/*CSS position start*/
+.relativePosition1{
+	position: relative;
+	border: 1px solid red;
+	bottom: 20px;
+	left: 30px;
+}
+.position2 {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	border: 2px solid green;
+	text-align: center;
+	background: rgba(76, 175, 80, 0.6);
+}
+.position2 button {
+	display: block;
+	cursor: pointer;
+	background: rgba(76, 175, 80, 0);;
+	border: none;
+	padding: 18px;
+}
+.position2 button a{
+	 text-decoration: none;
+	 font-weight: 500px;
+	 font-size: 20px;
+	 text-align: center;
+}
+
+.relativeposition3 {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  border: 3px solid #73AD21;
+} 
+
+.absoluteposition3 {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+
+.content {
+	overflow: scroll;
+	height: 300px;
+	width: 300px;
+}
+.sticky {
+	background: yellow;
+	width: 300px;
+	position: sticky;
+	top: 0;
+}
+.position4 {
+	position: relative;
+}
+.position4 p {
+	position: relative;
+	padding-left: 50px;
+	z-index: -2;
+}
+.imgposition4{
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	opacity: 0.5;
+}
+/*CSS position end*/
+
+
+
+
+
 /*CSS Overflow start*/
 #overflow1 {
   background: #eee;
@@ -214,9 +290,53 @@ body {
 } 
 /*<!-- CSS Pseudo-class end -->*/
 /*<!-- CSS Pseudo-element start -->*/
+.pseudoelement1::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+}
+.pseudoelement3::first-letter{
+  color: #ff0000;
+  font-size: xx-large;
+}
+.pseudoelement4::before{
+	content: url(images/smiley.gif);
+}
+.pseudoelement5::after{
+	content: url(images/smiley.gif);
+}
+
+.pseudoelement6 li::marker{
+	color: red;
+	font-size: 23px;
+}
+.pseudoelement7::selection {
+	background: yellow;
+	color: red;
+}
+/*<!-- CSS Pseudo-element end -->*/
+/*CSS Opacity start*/
+
+.opacity1{
+	opacity: 0.5;
+}
+.opacity1:hover{
+	opacity: 1;
+}
 
 
-
+.firstopacity2 {
+  background: rgba(76, 175, 80, 0.1);
+  padding: 10px;
+}
+.secondopacity2 {
+  background: rgba(76, 175, 80, 0.3);
+  padding: 10px;
+}
+.thirdopacity2 {
+  background: rgba(76, 175, 80, 0.6);
+  padding: 10px;
+}
+/*CSS Opacity end*/
 
 /*CSS Transitions start*/
 #transition1 {
@@ -274,6 +394,106 @@ background: green;
 }
 
 /*CSS Transitions end*/
+.animations1 {
+	height: 100px;
+	width: 100px;
+	background: black;
+	animation-name: exanimations1;
+	animation-duration: 3s;
+}
+@keyframes exanimations1 {
+	from {background: red;}
+	to {background: yellow;}
+}
+
+.animations2 {
+	height: 100px;
+	width: 100px;
+	background: black;
+	animation-name: exanimations2;
+	animation-duration: 5s;
+}
+@keyframes exanimations2 {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+
+.animations3 {
+	height: 100px;
+	width: 100px;
+	background: black;
+	animation-name: exanimations3;
+	animation-duration: 5s;
+	position: relative;
+}
+
+@keyframes exanimations3 {
+  0%   {background-color: red; left: 0px; top: 0px;}
+  25%  {background-color: yellow; left: 200px; top: 0px;}
+  50%  {background-color: blue; left: 200px; top: 200px;}
+  75% {background-color: green; left: 0px; top: 200px;}
+  100% {background-color: black; left: 0px; top: 0px;}
+}
+.animations4 {
+	height: 100px;
+	width: 100px;
+	background: black;
+	animation-name: exanimations4;
+	animation-duration: 3s;
+	animation-iteration-count: 3;
+	position: relative;
+}
+
+@keyframes exanimations4 {
+  0%   {background-color: red; left: 0px; top: 0px;}
+  50%  {background-color: blue; left: 200px; top: 0px;}
+  100% {background-color: black; left: 0px; top: 0px;}
+}
+.animations5 {
+	height: 100px;
+	width: 100px;
+	background: black;
+	animation-name: exanimations5;
+	animation-duration: 4s;
+	position: relative;
+	animation-direction: alternate;
+	animation-iteration-count: 4;
+}
+
+@keyframes exanimations5 {
+  0%   {background-color: red; left: 0px; top: 0px;}
+  25%  {background-color: yellow; left: 200px; top: 0px;}
+  50%  {background-color: blue; left: 200px; top: 100px;}
+  75% {background-color: green; left: 0px; top: 100px;}
+  100% {background-color: black; left: 0px; top: 0px;}
+}
+
+
+.animations6 {
+	width: 100px;
+	height: 50px;
+	background: red;
+	margin-top: 6px;
+	animation: moveanimations6 10s;
+	position: relative;
+}
+@keyframes moveanimations6 {
+	from {left: 0px;}
+	to {left: 1000px;}
+}
+.animations6a {animation-timing-function: ease;}
+.animations6b {animation-timing-function: linear;}
+.animations6c {animation-timing-function: ease-in;}
+.animations6d {animation-timing-function: ease-out;}
+.animations6e {animation-timing-function: ease-in-out;}
+
+
+
+
+
+
 /*CSS Box sizing start*/
 .boxsizing1{
 	width: 300px;

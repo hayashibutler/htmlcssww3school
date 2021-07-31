@@ -11,7 +11,7 @@
 <!-- CSS Display start -->
 <h2 class="body">CSS Display</h2>
   <p>Cho phep hien thi, theo block/inline</p>
-  <ul><li><b>Block-level</b></li></ul>
+  <ul><li><b><a id="idseudoelement2b" href="#idseudoelement2a">Block-level</a></b></li></ul>
 	<pre>
 	&lt;div>
 	&lt;h1> - &lt;h6>
@@ -47,10 +47,63 @@
   </ul>
 <!-- CSS Display end -->
 <h2 class="body">CSS max-width</h2>
-<h2 class="body">CSS Position</h2>
 
+<!-- CSS Position start -->
+<h2 class="body"><a id="idposition1a" href="#idposition1b">CSS Position</a></h2>
+<ul>
+	<li>static</li>
+	<li>relative</li>
+	<li>fixed</li>
+	<li>absolute</li>
+	<li>sticky</li>
+</ul>
+<h3>position: static</h3>
+<p>Vi tri binh thuong cua Trnag, khong anh huong bat ki thuoc tinh nao (top, bottom, left, right)</p>
 
+<h3>position: relative</h3>
+<p>Thay doi so voi vi tri binfh thuong. Cac noi dung khac khong bi anh huong</p>
+<div class="relativePosition1">
+This div element has position: relative;
+</div>
+<h3>position: fixed</h3>
+<p>Co' dinh vi tri voi left, top, bottm, right</p>
+<div class="position2">
+	<button><a href="index.html">HTML</a></button>
+	<button><a href="css.html">CSS</a></button>
+</div>
+
+<h3>position: absolute;</h3>
+<p>Tuong doi voi phan tu cha</p>
+
+<div class="relativeposition3">This div element has position: relative;
+	<pre>class="relative"
+  class="absolute"</pre>
+  <p><b>Note</b>: fixed, relative... ngoai tru voi static</p>
+  <div class="absoluteposition3">This div element has position: absolute;</div>
+</div>
+
+<h3>position: sticky;</h3>
+<p>neo vi tri, khi cuon trang</p>
+<div class="content">
+
+  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+ <div class="sticky">I am sticky!</div>
+  <p>Scroll back up to remove the stickyness.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div>
+<p><b>Note</b>: su dung voi it nhat 1 trong 4 phan tu: top, bottom, left, right</p>
+<h3>z-index xac dinh thu tu chong cheo len nhau</h3>
+<div class="position4">
+<h1>This is a heading</h1>
+<img class="imgposition4" src="images/pineapple.jpg" width="100" height="100">
+<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+</div>
+<p><b>Note</b>: phai co position, moi dung dc z-index</p>
+<p>- truong hop trunfg z-index, phan tu nao nam tren, thi de` len</p>
+<!-- CSS Position end -->
 <!-- CSS Layout - Overflow start-->
+
   <h2 class="body">CSS Layout - Overflow</h2>
     <p>cat noi dung va them thanh cuon</p>
     <ul><li>overflow: <b>visible</b> (default) Phan tran khong cat bo't, noi dung hien thi ben ngoai</li></ul>
@@ -253,6 +306,55 @@ p:first-child {
 <!-- CSS Pseudo-class end -->
 <!-- CSS Pseudo-element start -->
 
+<h2 class="body">CSS Pseudo-element</h2>
+
+<h4>::first-line</h4>
+
+<p class="pseudoelement1">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+<p><b>Note</b>: chi hieu qua trong <a id="idseudoelement2a" href="#idseudoelement2b">block-level</a></p>
+<p><b>Note</b>: ::first-line trong CSS3 - :first-line trong CSS1, CSS2 (muc dich de phan biet pseudo-elements(::) va pseudo-classes (:)</p>
+
+<h4>::first-letter</h4>
+<p class="pseudoelement3">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+<p><b>Note</b>: trong block-level</p>
+
+<h4>::before</h4>
+<p>Chen truoc noi dung</p>
+<h3 class="pseudoelement4">This is a heading</h3>
+<h4>::after</h4>
+<h3 class="pseudoelement5">This is a heading</h3>
+<h4>::marker</h4>
+<pre>
+.text li::marker { 
+  color: red;
+  font-size: 23px;
+}
+</pre>
+<ul  class="pseudoelement6">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+<h4>::selection</h4>
+<p>chi dung voi 4 thuoc tinh color, background, cursor, and outline.</p>
+<h3 class="pseudoelement7">Select this text</h3>
+<!-- CSS Pseudo-element end -->
+<!-- CSS Opacity start-->
+
+<h2 class="body">CSS Opacity</h2>
+	
+<img class="opacity1" src="images/img_5terre.jpg" width="250px" height="170px">
+<pre>opacity nhan 0-1</pre>
+<p>Style opacity vao background</p>
+<ul>
+	<li>background: rgba(76, 175, 80, 0.1)</li>
+	<li>class="background"</li>
+</ul>
+<div>
+	<div class="firstopacity2"><p>10% opacity</p></div>
+	<div class="secondopacity2"><p>30% opacity</p></div>
+	<div class="thirdopacity2"><p>60% opacity</p></div>
+</div>
 
 
 
@@ -265,7 +367,7 @@ p:first-child {
 
 
 
-
+<!-- CSS Opacity end-->
 
 <!-- CSS Advanced start -->
 <h1 class="body">CSS Advanced</h1>
@@ -315,23 +417,7 @@ p:first-child {
 <div style="background: repeating-radial-gradient(circle, red 5%, yellow 15%, green 60%); height: 100px; width: 200px;"></div>
 
 <!-- CSS Gradients end -->
-<!-- CSS Box sizing start -->
 
-  <h3><a href="#idFloatExamples1a" id="idFloatExamples1b">CSS Box sizing</a></h3>
-  <pre>box-sizing: border-box</pre>
-  <p>Kich thuoc tha bao gom cac thuoc tinh van ban: padding, margin</p>
-  <ul><li>Chua co box-sizing</li></ul>
-  	<div class="boxsizing1">This div is smaller (width is 300px and height is 100px).</div>
-	<pre>Them padding: 20px</pre>
-	<div class="boxsizing2">This div is bigger (width is also 300px and height is 100px).</div>
-  <ul><li>Co box-sizing: border-box</li></ul>
-	<div class="boxsizing3">This div is bigger (width is also 300px and height is 100px).</div>
-	<p><b>Note</b>: toan bo trang * {}</p>
-	<pre>* {
-  box-sizing: border-box;
-}</pre>
-
-<!-- CSS Box sizing end -->
 
 
 
@@ -343,7 +429,7 @@ p:first-child {
 
 
 <!-- CSS Transitions start -->
-<h3>CSS Transitions</h3>
+<h2 class="body">CSS Transitions</h2>
 <ul>
 	<li>transition</li>
 	<li>transition-property</li>
@@ -405,11 +491,105 @@ transition-timing-function ease, ease, ease</pre>
   transition: width 2s linear 1s;
 </pre>
 <!-- CSS Transitions end -->
+<!-- CSS Animations start -->
+<h2 class="body">CSS Animations</h2>
+<ul>
+	<li>@keyframes</li>
+	<li>animation-name</li>
+	<li>animation-duration</li>
+	<li>animation-delay: co the gia tri (am)</li>
+	<li>animation-iteration-count</li>
+	<li>animation-direction</li>
+	<li>animation-timing-function</li>
+	<li>animation-fill-mode</li>
+	<li>animation</li>
+</ul>
+	<h3> @keyframes & animation-name/duration</h3>
+
+<pre>
+	@keyframes example {
+		from {background: red;}
+		to {background: yellow;}
+	}
+	div {
+		animation-name: example;
+		animation-duration: 3s;
+	}
+</pre>
+	<div class="animations1"></div>
+<p>(refesh lai ngay day de xem hieu ung)</p>
+<h4>thay the "from" va "to" bang %</h4>
+<pre>
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}	
+</pre>
+	<div class="animations2"></div>
+<h4>Thay doi mau va vi tri</h4>
+<pre><a id="idposition1b" href="#idposition1a">position:</a> relative;</pre>
+	<div class="animations3"></div>
+	<pre>
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+	</pre>
+<h3>animation-iteration-count: so lan lap lai</h3>
+<pre>animation-iteration-count: infinite (vo han)</pre>
+	<div class="animations4"></div>
+
+<h3>animation-direction</h3>
+<ul>
+	<li>normal (default)</li>
+	<li>reverse: nguoc lai</li>
+	<li>alternate: luan phien dao nguoc (thuan truoc)</li>
+	<li>alternate-reverse</li>
+</ul>
+	<div class="animations5"></div>
+
+<h3>animation-timing-function</h3>
+	<div class="animations6 animations6a">ease</div>
+	<div class="animations6 animations6b">linear</div>
+	<div class="animations6 animations6c">ease-in</div>
+	<div class="animations6 animations6d">ease-out</div>
+	<div class="animations6 animations6e">ease-in-out</div>
+
+<h3>Shorthand</h3>
+<pre>animation: example 5s linear 2s infinite alternate;</pre>
+
+
+
+<!-- CSS Animations end -->
+<!-- CSS Box sizing start -->
+
+  <h2 class="body"><a href="#idFloatExamples1a" id="idFloatExamples1b">CSS Box sizing</a></h2>
+  <pre>box-sizing: border-box</pre>
+  <p>Kich thuoc tha bao gom cac thuoc tinh van ban: padding, margin</p>
+  <ul><li>Chua co box-sizing</li></ul>
+  	<div class="boxsizing1">This div is smaller (width is 300px and height is 100px).</div>
+	<pre>Them padding: 20px</pre>
+	<div class="boxsizing2">This div is bigger (width is also 300px and height is 100px).</div>
+  <ul><li>Co box-sizing: border-box</li></ul>
+	<div class="boxsizing3">This div is bigger (width is also 300px and height is 100px).</div>
+	<p><b>Note</b>: toan bo trang * {}</p>
+	<pre>* {
+  box-sizing: border-box;
+}</pre>
+
+<!-- CSS Box sizing end -->
+
+
 
 
 
 <!-- CSS Flexbox start -->
-<h2><a id="flexbox1b" href="#flexbox1a">CSS Flexbox</a></h2>
+<h2 class="body"><a id="flexbox1b" href="#flexbox1a">CSS Flexbox</a></h2>
 
 
 
