@@ -61,7 +61,7 @@
 <p>Vi tri binh thuong cua Trnag, khong anh huong bat ki thuoc tinh nao (top, bottom, left, right)</p>
 
 <h3>position: relative</h3>
-<p>Thay doi so voi vi tri binfh thuong. Cac noi dung khac khong bi anh huong</p>
+<p>lay ban than lam toa do, tuy y su dung top, left..., de len cac thanh phan khac.Cac noi dung khac khong bi anh huong</p>
 <div class="relativePosition1">
 This div element has position: relative;
 </div>
@@ -73,13 +73,24 @@ This div element has position: relative;
 </div>
 
 <h3>position: absolute;</h3>
-<p>Tuong doi voi phan tu cha</p>
-
+<p>Tuong doi voi phan tu cha.</p>
+<p><b>note</b>: the box-child co thuoc tinh "position: absolute", timf the cha box nao co thuoc tinh "position: bat ky"</p>
 <div class="relativeposition3">This div element has position: relative;
 	<pre>class="relative"
   class="absolute"</pre>
   <p><b>Note</b>: fixed, relative... ngoai tru voi static</p>
   <div class="absoluteposition3">This div element has position: absolute;</div>
+</div>
+<p>1 ung dung khac</p>
+<pre>
+	//width va height khong co
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	left: 10px;
+</pre>
+<div class="absoluteposition4a">
+	<div class="absoluteposition4b"></div>
 </div>
 
 <h3>position: sticky;</h3>
@@ -276,7 +287,7 @@ This div element has position: relative;
 
 
 <!-- CSS Pseudo-class start -->
-  <h2 class="body">CSS Pseudo-class</h2>	
+  <h2 class="body"><a href="./index.html#pseudoclss1b" id="pseudoclss1a">CSS Pseudo-class</a></h2>	
   <p>Tao 1 hieu chinh phu bo sung</p>
 	<pre>selector:pseudo-class {
   property: value;
@@ -306,7 +317,7 @@ p:first-child {
 <!-- CSS Pseudo-class end -->
 <!-- CSS Pseudo-element start -->
 
-<h2 class="body">CSS Pseudo-element</h2>
+<h2 class="body"><a href="./index.html#pseudoelement1b" id="pseudoelement1a">CSS Pseudo-element</a></h2>
 
 <h4>::first-line</h4>
 
@@ -336,6 +347,7 @@ p:first-child {
   <li>Milk</li>
 </ul>
 <h4>::selection</h4>
+<p>su lua chon</p>
 <p>chi dung voi 4 thuoc tinh color, background, cursor, and outline.</p>
 <h3 class="pseudoelement7">Select this text</h3>
 <!-- CSS Pseudo-element end -->
@@ -379,7 +391,7 @@ p:first-child {
 	<li>Radial Gradients trung tam</li>
 </ul>
 
-<h4>Linear Gradients</h4>
+<h4 id="cssfunction1a"><a href="./index.html#cssfunction2a">Linear Gradients</a></h4>
 <pre>background-image: linear-gradient(direction, color-stop1, color-stop2, ...);</pre>
 
 <p>-Top to Bottom {linear-gradient(red, yellow)}</p>

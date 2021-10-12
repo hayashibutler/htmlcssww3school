@@ -7,13 +7,575 @@
 </head>
 <body>
 	<p><a href="css.html">CSS</a></p>
+<h1 class="body">https://fullstack.edu.vn/</h1>
+<h2 class="body">The HTML thong dung</h2>
+<h3>table</h3>
+<p>table -> thead -> th
+	table ->tbody -> tr (dong)/td (cot)</p>
+<pre>
+	&lt;table>
+
+	  &lt;thead>
+	    &lt;th>STT&lt;/th>
+	    &lt;th>Ten&lt;/th>
+	    &lt;th>Dia chi&lt;/th>
+	  &lt;/thead>
+
+	  &lt;tbody>
+	    &lt;tr>
+	      &lt;td>1&lt;/td>
+	      &lt;td>Lam 1&lt;/td>
+	      &lt;td>HCM&lt;/td>
+	    &lt;/tr>
+	  &lt;/tbody>
+
+	&lt;/table>
+</pre>
+
+<table>
+	<thead>
+		<td>STT</td>
+		<td>Ten</td>
+		<td>Dia chi</td>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Lam 1</td>
+			<td>HCM</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Lam 2</td>
+			<td>HCM 2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Lam 3</td>
+			<td>HCM 3</td>
+		</tr>
+	</tbody>
+</table>
+<h2 class="body">CSS trong HTML</h2>
+<p>vi tri</p>
+<ul>
+	<li>internal</li>
+	<p>tai the &lt;head>&lt;/head> trong &lt;style>&lt;/style></p>
+	<li>External</li>
+	<p>file ben ngoai</p>
+	<p>&lt;link rel="stylesheet" href="style.css"></p>
+	<li>inline</li>
+	<p>&lt;h1 style="font-size: 30px;">&lt;/h1></p>
+</ul>
+<h2 class="body">Muc do uu tien trong CSS</h2>
+<ol>
+	<li>Internal va External: cai nao goi sau, se uu tien cai do</li>
+	<li>Inline (1000)</li>
+	<li>id (100)</li>
+	<li>.class (10)</li>
+	<li>tag (1)</li>
+</ol>
+<h2>Dat bien CSS</h2>
+<p>muc dich: mau chu da.o cua web, chi can thay doi 1 lan</p>
+<pre>
+:root {
+	--text-color: red;
+}
+
+h1 {
+	color: var(--text-color)
+}
+
+</pre>
+<h2 class="body">Don vi trong HTML</h2>
+<h3>Tuyet doi Absolute Units</h3>
+<ul>
+	<li><b>px</b> pixel (diem anh)</li>
+	<li>pt</li>
+	<li>cm</li>
+	<li>mm</li>
+	<li>inch</li>
+	<li>pc</li>
+</ul>
+
+<h3>Tuong doi Relative Units</h3>
+<ul>
+	<li><b>%</b>: phu thuoc vao thanh phan</li>
+	<li><b>rem</b>: di theo font-size cuar the html</li>
+		<p>2rem, html size 16px</p>
+		<h1>rem h1</h1>
+		<h1 class="donvirem">rem h1</h1>
+		<p>rem p</p>
+		<p class="donvirem">rem p</p>
+	<li><b>em</b>: phu thuoc vao style gan nhat</li>
+	<li>vw (viewport width): 50vw - 50% chieu ngang duyet trinh</li>
+	<li>vh (viewport height)</li>
+	<p></p>
+	<li>vmin</li>
+	<li>vmax</li>
+	<li>ex</li>
+	<li>ch</li>
+</ul>
+<h2 class="body">CSS function</h2>
+<ul>
+	<li>var()</li>
+	<li><a href="./css.html#cssfunction1a" id="cssfunction2a">linear-gradient()</a></li>
+	<li>rgba()</li>
+	<li>rgb(): mau rgb(255, 255, 255)</li>
+	<li>calc(): tinh toan width, height</li>
+	<pre>	width: calc(120px - 50px)</pre>
+	<li>attr(): attribute</li>
+	<p>dung voi lop gia</p>
+	<pre>
+	a::after {  
+	  content: " "attr(href);
+	}</pre>
+	<a class="cssfunction1" href="https://fullstack.edu.vn/">Hoc lap trinh</a>
+
+</ul>
+<h2 class="body"><a href="./css.html#pseudoclss1a" id="pseudoclss1b">Pseudo-class</a></h2>
+<ul>
+	<li>:root Chọn phần tử gốc của tài liệu</li>
+	<li>:hover</li>
+	<li>:active</li>
+	<li>:first-child</li>
+	<li>:last-child</li>
+	<li>:target</li>
+	<li>:focus (trong input, con chuot nhay')</li>
+	<p><a href="#news1">Jump to New content 1</a></p>
+<p><a href="#news2">Jump to New content 2</a></p>
+<div class="pseudoclass4">
+<p  id="news1"><b>New content 1...</b></p>
+<p  id="news2"><b>New content 2...</b></p>
+</div>
+</ul>
+
+<!-- 3 tab -->
+<style type="text/css">
+	.tab div {
+		display: none;
+	}
+	.tab div:target {
+		display: block;
+	}
+
+</style>
+<div class="tab">
+	<a href="#link1">Link 1</a>
+	<a href="#link2">Link 2</a>
+	<a href="#link3">Link 3</a>
+
+	<div id="link1">
+		<h3>Content to Link 1</h3>
+		<p>Hello World!</p>
+	</div>
+	<div id="link2">
+	  <h3>Content to Link 2</h3>
+	  <h4>Great success!</h4>
+	</div>
+	<div id="link3">
+	  <h3>Content to Link 3</h3>
+	  <p>Yeah!</p>
+	</div>
+</div>
+<!-- 3 tab -->
+<h2 class="body"><a href="./css.html#pseudoelement1a" id="pseudoelement1b">Pseudo-element</a></h2>
+<ul>
+	<li>::before</li>
+	<li>::after</li>
+	<b>Note</b>
+	<pre>
+	::before{
+		content: ""; // giup box ton tai;
+		display: block; // hien thi nhu 1 khoi'. trong div da co san "block, cac lop gia ::before thi khong co"
+	}</pre>
+	<li>::first-letter</li>
+	<li>::first-line</li>
+	<li>::section</li>
+</ul>
+
+<h2 class="body">CSS Box-sizing</h2>
+<p><b>padding, border</b>: lam tang kich thuoc cua box</p>
+<p>dung <b>box-sizing: border-box</b> de co' dinh size box (mac dinh: content-box)</p>
+<style type="text/css">
+	.boxsizing1 {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		color: #000;
+		font-size: 20px;
+		padding: 20px;
+		box-sizing: border-box;
+		border: none;
+	}
+		.boxsizing2 {
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		color: white;
+		font-size: 20px;
+		padding: 20px;
+		border: none;
+	}
+</style>
+<p class="boxsizing1">border-box box have a text</p>
+
+<p class="boxsizing2">content-box box have a text</p>
+
+
+<h2 class="body">CSS Background</h2>
+<h3>background-clip (di voi background-color)</h3>
+<p>mac dinh la border-box. ngoai ra padding-box, content-box</p>
+<style type="text/css" >
+	.background-clip1 {
+		width: 200px;
+		height: 100px;
+		background-color: red;
+		box-sizing: border-box;
+		padding: 10px;
+		border: 10px dashed white;
+	}
+</style>
+<div class="background-clip1"></div>
+
+<h3>background-image</h3>
+<pre>	background-image: url(), url();</pre>
+
+
+<p>background-repeat: no-repeat, repeat-x, repeat-y</p>
+
+<style type="text/css">
+	.background-image1 {
+		width: 200px;
+		height: 200px;
+		background-size: 100%;
+		background-image: linear-gradient(rgba(255,0,0,0.3), rgba(255,255,255,0.3)), url(images/pineapple.jpg);
+	}
+</style>
+<pre>	background-image: linear-gradient(0, red, white)</pre>
+<div class="background-image1"></div>
+<h3>background-size</h3>
+<p><b>keyword</b>:</p>
+<ul>
+	<li>contain: lay theo chieu phu hop nhat. max < size thuc te cua picture</li>
+	<li>cover: cat 1 phan picture, phu toan 100%</li>
+</ul>
+<h3>background-orgin (di voi background-origin)</h3>
+<p>mac dinh la border-box. ngoai ra padding-box, content-box</p>
+<h3>background-position</h3>
+<p>top right</p>
+<p>top 20px right 20px</p>
+<p>20% 20%</p>
+<h1 class="body">xay dung web The Band</h1>
+<h3 class="body"><a href="https://www.w3schools.com/w3css/tryw3css_templates_band.htm">trang web</a></h3>
+<h3>Cac thanh phan website</h3>
+<ul>
+	<li>Header</li>
+	<img class="thband" src="./images/header.png">
+	<li>Navigation (dieu huong)</li>
+	<li>Breadcrumb</li>
+	<img src="./images/breadcrumb.png">
+	<li>Sidebar</li>
+	<li>Slider (trinh dien hinh anh, video)</li>
+	<li>content</li>
+	<li>banner</li>
+	<li>footer</li>
+</ul>
+<h3>Tao project dau tien</h3>
+<ul>
+	<li>Reset CSS cua html</li>
+	<pre>
+		/* reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*co' dinh size box khi thay doi padding:*/ 
+}
+	</pre>
+	<li>the div bao toan bo web</li>
+	<p>co th dat class="main/wapper/app"</p>
+</ul>
+<h3>To hop phim</h3>
+<pre>
+	Ctrl + D -> chon lan luot cac ky tu giong
+	Ctrl + Shift + L -> chon 1 lan
+	Alt + Shift + mui ten phai -> chon class/id
+	Alt + Shift + mui ten len/xuong
+</pre>
+<h3>Nguyen tac phan tich</h3>
+<ol>
+	<li>tu ngoai vao trong</li>
+	<li>Tu tren xuong duoi</li>
+	<li>Tu trai sang trai</li>
+</ol>
+<h3>Cau hoi giai quyet van de</h3>
+<ol>
+	<li>Vi tri</li>
+	<li>Kich thuoc</li>
+	<li>Mau sac</li>
+	<li>Style (font chu, tron/vuong)</li>
+</ol>
+<b>Not ghi cho thuoc tinh</b>
+<pre>display: inline-block // ko xet duoc size, auto</pre>
+<pre>line-heiht: 46px // style vao the chu~.</pre>
+
+<pre>
+html {
+  font-family: Helvetica, Arial, sans-serif;
+}
+</pre>
+<p>- style vao html la ke thua. style vao * la tat ca deu thay doi</p>
+<p>- uu tien font Helvetica truoc, ko co se tim font Arial, sans-serif: neu ko co ca 2 font, se tu dong tim font nao khong chan co tren may</p>
+<h3>Can giua voi thuoc tinh position: absolute</h3>
+<ul>
+	<li>Cach 1:</li>
+	<pre>
+	.thecha {
+	  position: absolute;
+	  
+	  // full chieu ngang the cha
+	  width: 100%;
+	  (hoac)
+	  left: 0px;
+	  right: 0px
+	}
+
+	.thecon{
+	  text-align: center;
+	}
+</pre>
+	<li>Cach 2</li>
+<pre>
+.thecha {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.thecon {
+	text-align: center;
+}
+</pre>
+<h3>z-index: 1 // noi len tren</h3>
+</ul>
+
+<h3>Can ngang</h3>
+<p>Neu dung float: left</p>
+<p>bo sung the div co clear: both</p>
+<h3>Hanh vi cuon</h3>
+<pre>scroll-behavior: smooth;</pre>
+
+<h2 class="body">CSS Flexbox</h2>
+<img src="./images/flex_terms.png">
+<p><b>display:</b> flex | inline-flex</p>
+<p><b>flex-direction:</b> row (default) | column</p>
+<p><b>flex-wrap:</b> nowrap (6 cai, ko xuong dong)| wrap (xuong dong)| wrap-reverse (ngat dong, dua len tren)</p>
+<p><b>flex-flow:</b> (shorthand cua flex-direction/wrap)</p>
+<p><b>flex-basis:</b> &lt;length> (size cua item, row -> main, column -> croww)</p>
+<p><b>justify-content: (vi tri/khoang cach ngang)</b> flex-start | flex-end | center (can chinh)</p>
+<p><b>align-content: (vi tri/khoang cach doc)</b> flex-start | flex-end | center</p>
+<p><b>align-item:</b> (theo tung dong)</p>
+<p><b>align-item:</b> </p>
+<p><b>align-self:</b> flex-start | flex-end | center</p>
+<p><b>flex-grow: (lon len. mac dinh la 0)</b> &lt;number></p>
+<p><b>flex-shrink: (thu nho. mac dinh la 1)</b> &lt;number></p>
+<p><b>flex:</b> &lt;number> (shorthand cua flex-basis/grow/shrink</p>
+<p><b>order:</b> &lt;number> (thay doi vi tri. )</p>
+<p>Tham khao flexbox <a href="https://quantrimang.com/su-dung-bo-cuc-trang-flexbox-trong-css-163636#mcetoc_1davnsdfk0" target="_blank">link 1</a> va <a href="https://codepen.io/enxaneta/full/adLPwv/" target="_blank">Link 2</a> giai thich ro ve flex-grow</p>
+<b>Note flex va flex-grow</b>
+<p>flex la viet gon cua flex-grow, nhung co luu y</p>
+<p>flex-grow khong the dung voi doan van ban dai hon 1 dong. Hay dung flex thay the</p>
+<h2 class="body">BEM</h2>
+<h3>BEM</h3>
+<p>Block Element Modifier: Khoi + Thanh phan + Bo sung</p>
+<h3>Cu phap</h3>
+<p>.block</p>
+<p>.block__element</p>
+<p>.block--modifier</p>
+<p>.block__element--modifier</p>
+
+<div>
+	<a href ="#" class="bth bth--success bth--disable">GO TO NEXT APPROVAL</a>
+	<a href ="#" class="bth bth--warn">OK</a>
+	<a href ="#" class="bth bth--error">TRY AGAIN</a>
+</div>
+
+<style type="text/css">
+	.bth {
+		display: inline-block;
+		text-decoration: none;
+		color: #fff;
+		padding: 12px 48px;
+		border-radius: 20px;
+		font-weight: 600;
+		transition: opacity 0.5s ease;
+	}
+
+	.bth:hover {
+		opacity: 0.6;
+	}
+
+	.bth + .bth {
+		margin-left: 16px;
+	}
+
+	.bth--success {
+		background-color: #71be34;
+
+	}
+	.bth--warn {
+		background-color: #ffb702;
+	}
+	.bth--error{
+		background-color: #ff623d;
+	}
+	.bth--disable {
+		opacity: 0.5 !important;
+		cursor: default;
+	}
+
+
+</style>
+<pre>
+	.bth + .bth {
+	  margin-left: 16px;
+	}
+
+style .bth(2) khi co 2 bth canh nhau
+</pre>
+
+
+<b>Hieu ung amination</b>
+<pre>
+	animation: sideInLeft ease 1s, fadeOut ease 1s 3s forwards;
+
+	@keyframes sideInLeft {
+	    from {
+	        transform: translateX(40%);
+	        opacity: 0;
+	    }
+	    to {
+	        transform: translateX(0%);
+	        opacity: 1;
+	    }
+	}
+	@keyframes fadeOut {
+	    to {
+	        opacity: 0;
+	    }
+	}
+</pre>
+<h3>Khong cho phep copy</h3>
+<pre>
+	user-select: none;
+	-webkit-user-select: none;
+</pre>
+<h3>triangle arrow</h3>
+<pre>
+	border: 20px solid;
+	border-color: green red blue yellow
+</pre>
+<p>tuong duong</p>
+<pre>
+	border-top: 20px solid green;
+	border-right: 20px solid red;
+	border-bottom: 20px solid blue;
+	border-left: 20px solid yellow;
+</pre>
+
+<div style=" display: inline-block; border-top: 20px solid green;
+  border-right: 20px solid red;
+  border-bottom: 20px solid blue;
+  border-left: 20px solid yellow;"></div>
+<h3>animation</h3>
+<p>them will-change giup cho chuyen dong muot hon</p>
+<pre>
+	animation: notifyGrowth ease-in 0.2s;
+	will-change: opacity, transform;
+</pre>
+
+<h3>Dac thu cua thi truong nuoc ngoai: prefixer + outline</h3>
+<h4>prefixer</h4>
+<p><a href="https://caniuse.com/" target="_blank">https://caniuse.com/</a></p>
+<h4>outline: nuoc ngoai se quan tam</h4>
+<img src="./images/outline.png">
+<h3>Dâu 3 chấm</h3>
+<pre>
+	overflow: hidden;
+	/* text-overflow: ellipsis; */
+	/* white-space: wrap; */
+	display: -webkit-box;
+	-webkit-box-orient: vertical; /* dinh hinh noi dung theo chieu doc*/
+	-webkit-line-clamp: 2; /*dong them dau 3 cham */
+</pre>
+<h4>Media query</h4>
+<h3>syntax</h3>
+<pre>
+	@media not|only mediatype and (mediafeature and|or|not mediafeature)
+</pre>
+<p>mediatype: print, screen, speech</p>
+<p>tren caniuse. media se khong hoat dong voi IE 6-9 (nguoi Nhat van con dung nhieu)</p>
+<li>Can cai them file js media</li>
+<p>search: respond polyfill cdn</p>
+<li>copy paste doan duoi vao: duyet trinh cu se hieu la doan code (duyet trinh hieu la comment)</li>
+<p>search: html condition conment</p>
+<pre>
+&lt;!--[if lte IE 9]>
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js">&lt;/script>
+&lt;![endif]-->
+</pre>
+
+<h3>breakpoint</h3>
+<p>search: media response common breakpoint</p>
+<p><a href="https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/" target="_blank">link media breakpoint</a></p>
+
+<ul>
+	<li>PC</li>
+	<pre>@media (min-width: 1024) {}</pre>
+	<li>Table</li>
+	<pre>@media (min-width: 740) and (max-width: 1023) {}</pre>
+	<li>Mobile</li>
+	<pre>@media (max-width: 739) {}</pre>
+
+</ul>
+<h2>Tao thu vien Grid	</h2>
+
+<pre>
+.gird {
+    width: 100%;
+    display: block; /*du phong nh~ the con khong co thuoc tinh block */
+    padding: 0;
+}
+
+.grid.wide {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* PC low */
+@media screen and (min-width: 1024px) and (max-width: 1239px) {
+    .wide {
+        width: 984px;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .wide {
+        width: 644px;
+    }
+}
+</pre>
+
+
+
+
 <!-- HTML FORM -->
 
-<h2>HTML Forms</h2>
+<h1 class="body">HTML Forms</h1>
 
 <!-- HTML FORM start-->
 
-  <h3>HTML Forms</h3>
+  <h2 class="body">HTML Forms</h2>
 
   <div>form thu thap thong tin nguoi dung</div>
   
@@ -34,9 +596,73 @@
 	  <div>phai co name, value moi duoc luu vao khi nhan submit. name = "fname" === database</div>
 
 <!-- HTML FORM end-->
+<!-- HTML Form Attributes start -->
+<h2 class="body">HTML Form Attributes</h2>
+<h3>action=""</h3>
+<p>xac dinh hanh dong duoc thuc hien khi bieu mau duoc gui</p>
+<pre>&lt;form action="/action_page.php"></pre>
+<h3>target=""</h3>
+<ul>
+	<li>_blank mo 1 tab moi</li>
+	<li>_self window hien tai (default)</li>
+	<li>_parent tai framename khung chinh (framename la ten khung)</li>
+	<li>_top hien thi toan bo trong noi dung cua so</li>
+</ul>
+<h3>method=""</h3>
+<ul>
+	<li>method="get": gui gia tri URL (default)</li>
+	<p>link: https://www.w3schools.com/action_page.php?fname=John&lname=Doe</p>
+	<li>method="post": gui HTTP post</li>
+	<p>link: https://www.w3schools.com/action_page.php</p>
+</ul>
+<b>Note GET:</b>
+<p>+ khong an toan voi thong tin ca nhan</p>
+<p>+ toi da 2048 ky tu</p>
+<b>Note POST:</b>
+<p>???+ Khong the danh dau cac bieu mau bang POST</p>
+<h3>autocomplete="on/off"</h3>
+<p>autocomplete tu dong hien thi danh sach noi dung da nhap truoc do</p>
+<p>on (default)</p>
+<h3>novalidate</h3>
+<p>Khong xac nhan gia tri nhap truoc khi nhan submit</p>
+<p>email co dinh dang @. neu co novalidate, van nhan duoc submit</p>
+<form action="/action_page.php" novalidate>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  <input type="submit">
+</form>
+
+<pre>
+&lt;form action="/action_page.php" novalidate>
+  &lt;label for="email">Enter your email:&lt;/label>
+  &lt;input type="email" id="email" name="email">&lt;br>&lt;br>
+  &lt;input type="submit">
+&lt;/form>
+</pre>
+<h3>more list</h3>
+<h3>enctype=""</h3>
+<p>cach ma hoa khi gui bieu mau den may chu</p>
+<b>Note: chi dung dc voi method="post"</b>
+<ul>
+	<li>application/x-www-form-urlencoded: ma hoa truoc khi gui (space thanh "+", ky tu thanh ky tu ASCII HEX)</li>
+	<li><b>multipart/form-data: bat buoc khi upload</b></li>
+	<li>text/plain: khong can ma hoa</li>
+</ul>
+<h3>rel=""</h3>
+<p>chi dinh moi lien he giua trang hien tai va trang lien ket</p>
+<ul>
+	<li>external: chi dinh trang khong thuoc web hien tai </li>
+	<li>help: lien ket den tai lieu ho tro</li>
+	<li>license: den thong tin ban quyen</li>
+	<li>next</li>
+	<li>nofollow lien ke den tai lieu chua chung thuc</li>
+	<li>prev</li>
+	<li>search lien ket den cong cu tim kiem cua tai lieu</li>
+</ul>
+<!-- HTML Form Attributes end -->
 <!-- HTML Form Elements start -->
 
-	<h3>HTML Form Elements</h3>
+	<h2 class="body">HTML Form Elements</h2>
 	<ul>
 		<li><a href="#htmlform1b">&lt;input></a></li>
 		<li><a id="elements1a" href="#elements1b">&lt;label></a></li>
@@ -326,8 +952,106 @@
 	<input type="file" name="" value="">
 
 <!-- HTML Input Types end-->
+<!-- HTML APIs start-->
+<h1 class="body">HTML APIs</h1>
+<!-- HTML Geolocation API start-->
+<h2 class="body">HTML Geolocation API	</h2>
+<p>nguoi dung phai chap nhan. Chinh xac hon voi nguoi dung dinh vi GPS</p>
+<p><b>Note</b>: API nay chi hoat dong tren HTTPS</p>
+<h3>getCurrentPosition()</h3>
+<p>Lay vi tri</p>
+<button onclick="getLocation1()">Cho phep</button>
+<p id="pgetLocation1">(Ket qua)</p>
+
+<script type="text/javascript">
+	var xgetLocation1 = document.getElementById('pgetLocation1');
+
+	function getLocation1() {
+		if(navigator.geolocation) {
+			navigator.geolocation.getCurrentPosition(showPositionGetLocation1, showError)
+		} else {
+			xgetLocation1.innerHTML = "geolocation is not supported by this browser"
+		}
+	}
+
+	function showPositionGetLocation1(position){
+		xgetLocation1.innerHTML = "Latitube:" + position.coords.latitude + "<br>Longitube:" + position.coords.longitude;
+	}
+
+	function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      xgetLocation1.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      xgetLocation1.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      xgetLocation1.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      xgetLocation1.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+</script>
+<pre>
+	var x = document.getElementById('demo');
+
+	function getLocation() {
+	  if(navigator.geolocation) {
+	    navigator.geolocation.getCurrentPosition(showPosition)
+	  } esle {
+	    x.innerHTML = 'Geolocation khong duoc ho tro tren duyet trinh nay'
+	  }
+	}
+
+	function showPosition(position) {
+	  x.innerHTML = "Latitube: "+posiion.coords.latitube + "&lt;br>Longitube: "+ position.coords.longitube;
+	}
+</pre>
+<h3>Xu ly Errors va Rejections</h3>
+<p>Tham so thu 2 trong getCurrentPosition() dung de xu ly loi</p>
+
+<pre>
+getCurrentPosition(showPosition, showError)
+</pre>
+<pre>
+	function showError(error) {
+		switch(error.code) {
+			case error.PERMISSION_DENIED:
+			  x.innerHTML = "Nguoi dung da huy yeu cau"
+			  break;
+			case error.POSITION.UNAVAILABLE:
+			  x.innerHTML = "Vi tri khong kha dung"
+			  break;
+			case error.TIMEOUT:
+			  x.innerHTML = "Thoi gian loading qua lau"
+			  break;
+			case error.UNKNOWN_ERROR:
+			  x.innerHTML = "Khong xac dinh duoc loi"
+			  break;
+		}
+	}
+</pre>
+<h3>Cac object tuong tu khac</h3>
+<ul>
+	<li>watchPosition() return vi tri va tiep tuc update khi nguoi dung di chuyen</li>
+	<li>clearWatch() stop vi tri cuarwatchPosition()</li>
+</ul>
 
 
+
+
+
+
+
+
+
+
+<!-- HTML Geolocation API end-->
+
+<!-- HTML APIs end-->
 
 </body>
 </html>
